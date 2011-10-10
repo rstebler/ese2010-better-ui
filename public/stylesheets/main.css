@@ -1,0 +1,103 @@
+a {
+  font-style: italic;
+}
+
+li {
+  list-style-type: disc;
+}
+
+table#calendar {
+  width: 100%;
+  table-layout: fixed;
+  vertical-align: middle;
+  margin-bottom: 30px;
+}
+
+table#calendar a {
+  font-style:normal;
+  display: block;
+  position: relative;
+  line-height: 50px;
+  text-decoration: none;
+}
+
+table#calendar td {
+  text-align: center;
+  background-color: #FFF;
+  height: 50px;
+  border: solid 1px #000;
+}
+
+table#calendar td.title {
+  background-color: #F0F0F0;
+  font-weight: bold;
+}
+
+table#calendar td#selected {
+  background-color: #F00;
+}
+
+table#calendar td#today {
+  background-color: #FF0;
+}
+
+#monthTitle {
+height: 50px;
+}
+
+#monthName {
+  width: 100%;
+  padding: 10px 0 10px 0;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#prevMonth, #nextMonth {
+  position: absolute;
+}
+
+#prevMonth {
+  left: 20px;
+}
+
+#nextMonth {
+  right: 270px;
+}
+
+span.error {
+  color: red;
+  padding-left: 10px;
+  font-size: small;
+}
+
+
+
+
+table#events {
+  width: 60%;
+}
+
+table#events td.event {
+
+}
+
+table#events td.edit {
+  width: 20px;
+}
+
+table#events td.delete {
+  width: 20px;
+}
+
+table#editEvent {
+  width: 100%;
+}
+
+table#editEvent td {
+  width: 40%
+}
+
+table#editEvent td.first {
+  width: 10%;
+}

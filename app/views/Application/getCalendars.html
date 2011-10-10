@@ -1,0 +1,38 @@
+#{extends 'main.html' /}
+#{set title:'Calendars' /}
+
+#{set 'moreStyles'}
+	<link rel="stylesheet" href="@{'/public/playmanual/manual.css'}" type="text/css" media="screen" charset="${_response_encoding}">
+	<link rel="stylesheet" href="@{'/public/playmanual/wiki.css'}" type="text/css" media="screen" charset="${_response_encoding}">
+#{/set}
+
+<div class="wrapper">
+
+	<div id="docSidebar">
+		<div id="logo">
+			<img src="@{'/public/playmanual/logo.png'}">				
+			<h2 id="version">Play ${play.version}</h2>
+		</div>
+
+		<h2>Logged in as: ${me.name}</h2>
+
+        <h2>Links</h2>
+        <ul>
+			<li><a href="@{Application.index()}">Home</a></li>
+			<li><a href="@{Application.getUsers()}">Users</a></li>
+			<li><a href="@{Application.index()}logout">Logout</a></li>
+        </ul>
+    </div>
+
+	<div id="pageContent">
+		<div class="wikistyle">
+			<h1>${user.name}'s Calendars:</h1>
+			<ul>
+				#{list items:calendars, as:'calendar'}
+				<li><a href="@{Application.getEvents(calendar.owner.name, calendar.ID)}">${calendar.name}</a></li>
+				#{/list}
+			</ul>
+        </div>
+    </div>
+			
+</div>
